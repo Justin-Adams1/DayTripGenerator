@@ -1,48 +1,45 @@
-function happyCheck(arrayNum){
-    let digits = arrayNum.length;
-    let count = 1;
+function getDestination(){
 
-    let x= [];
-    let square =[];
+    let destinationArray = ["Louisville", "Lexington", "Bowling Green", "Georgetown", "Covington"];
+    let selectedCity = destinationArray[Math.floor(Math.random() * destinationArray.length)];
+    let confirmation;
 
-    let sum =0;
-    let stringSum= "";
+    confirmation = prompt("Would you like to go to: " + selectedCity + "? Please type yes or no.");
 
-    for(i=0; i<digits; i++){
-        x[i] = parseInt(arrayNum[i]);
-        square[i] = (x[i]*x[i]);
+
+    selection.push(selectedCity);
+}
+
+function getRestaurant(destination){
+    if (destination == "Louisville"){
+
+
     }
 
-    for(i=0; i<square.length; i++){
-        sum += square[i];
-    }
-
-    stringSum = sum.toString();
     
-    return stringSum;
+
+
 }
 
-let sum;
-let repeatSum;
-let stringSum;
-let bufferSum;
-
-let stringNum = prompt("Please enter a number that you want to check to see if its happy: ");
-let arrayNum = stringNum.split("");
+function getModeOfTravel(){
     
-stringSum = happyCheck(arrayNum);
 
-console.log(stringSum)
 
-for(iteration=0; iteration<12; iteration++){
-    bufferSum = stringSum;
-    stringSum = happyCheck(bufferSum);
-    console.log(stringSum);
-    repeatSum = stringSum;
 }
 
-if(parseInt(repeatSum) === 1){
-    console.log("This number is happy!");
-}else{
-    console.log("This number is NOT happy!");
+function getEntertainment(destination){
+    
+
+
 }
+
+
+let selection = [];
+
+ 
+getDestination();
+
+
+// selection.push(getDestination);
+
+// console.log(selection);
